@@ -1,0 +1,8 @@
+rootProject.name = "MovieClient"
+include ':app'
+include ':core'
+include ':data'
+include ':common-ui'
+include ':common-worker'
+include ':ui-dashboard'
+include ':ui-detail'

@@ -1,20 +1,38 @@
+import com.suleymancelik.movieclient.buildsrc.Libs
+
 buildscript {
-    ext.kotlin_version = "1.5.30"
+    ext.kotlin_version = '1.5.30'
+    ext.buildConfig = [
+            'compileSdk': 29,
+            'minSdk'    : 21,
+            'targetSdk' : 29,
+    ]
     repositories {
         google()
         mavenCentral()
+        maven { url 'https://jitpack.io' }
+        maven { url 'https://maven.fabric.io/public' }
+        maven { url 'https://dl.bintray.com/kotlin/kotlin-eap' }
+        jcenter()
     }
+
     dependencies {
         classpath "com.android.tools.build:gradle:4.2.2"
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }
 }
 
+subprojects {
+
+}
+
 allprojects {
     repositories {
         google()
         mavenCentral()
-        jcenter() // Warning: this repository is going to shut down soon
+        jcenter()
+        maven { url 'https://jitpack.io' }
+        mavenLocal()
     }
 }
 

@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">MovieClient</string>
+
+
+    <string name="title_dashboard">Home</string>
+    <string name="title_movie_detail">Detail</string>
 </resources>
